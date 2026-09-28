@@ -40,6 +40,7 @@ export default function Transactions({ initialStatusFilter = 'All', activeTab = 
         return `${year}-${month}-${day}`;
     };
 
+
     const [fromDate, setFromDate] = useState(getTodayString());
     const [toDate, setToDate] = useState(getTodayString());
     const [activePreset, setActivePreset] = useState('today');
@@ -52,7 +53,7 @@ export default function Transactions({ initialStatusFilter = 'All', activeTab = 
     // Pagination states
     const [currentPage, setCurrentPage] = useState(1);
     const [rowsPerPage, setRowsPerPage] = useState(10);
-    
+
     const [transactionsList, setTransactionsList] = useState([]);
     const [summary, setSummary] = useState({
         totalTransactions: 0,
